@@ -1,0 +1,14 @@
+<svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="680" rx="44" fill="#040B12"/>
+  <rect x="132" y="104" width="936" height="472" rx="36" fill="#06111F" stroke="#10B981" stroke-opacity=".25"/>
+  <rect x="184" y="160" width="832" height="360" rx="28" fill="#020712"/>
+  <circle cx="232" cy="204" r="10" fill="#FCA5A5"/>
+  <circle cx="268" cy="204" r="10" fill="#FDE68A"/>
+  <circle cx="304" cy="204" r="10" fill="#86EFAC"/>
+  <text x="232" y="282" fill="#00D9FF" font-family="Consolas,monospace" font-size="34">$ python automate.py</text>
+  <text x="232" y="342" fill="#BBF7D0" font-family="Consolas,monospace" font-size="30">$ collecting workflow data</text>
+  <text x="232" y="402" fill="#BBF7D0" font-family="Consolas,monospace" font-size="30">$ optimizing repetitive tasks</text>
+  <text x="232" y="462" fill="#BBF7D0" font-family="Consolas,monospace" font-size="30">$ report exported successfully</text>
+  <rect x="756" y="250" width="178" height="178" rx="30" fill="#10B981" fill-opacity=".12" stroke="#10B981" stroke-opacity=".36"/>
+  <path d="M802 340L842 380L900 300" stroke="#86EFAC" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

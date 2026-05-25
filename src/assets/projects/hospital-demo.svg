@@ -1,0 +1,28 @@
+<svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="680" rx="44" fill="#EAF7FA"/>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1200" y1="0" y2="680" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F9FFFF"/>
+      <stop offset=".45" stop-color="#DDF4FA"/>
+      <stop offset="1" stop-color="#CBE8F5"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" rx="44" fill="url(#bg)"/>
+  <circle cx="1030" cy="66" r="140" fill="#C2EFFF" opacity=".7"/>
+  <circle cx="148" cy="520" r="220" fill="#C7F5DD" opacity=".55"/>
+  <rect x="222" y="134" width="770" height="410" rx="52" fill="#101827" transform="rotate(-10 222 134)"/>
+  <rect x="252" y="156" width="710" height="350" rx="38" fill="#F7FDFF" transform="rotate(-10 252 156)"/>
+  <text x="300" y="214" fill="#0EA5E9" font-family="Inter,Arial" font-size="28" font-weight="900" transform="rotate(-10 300 214)">MEDI-HEALTH OS</text>
+  <rect x="314" y="260" width="270" height="160" rx="24" fill="#EAF7FF" transform="rotate(-10 314 260)"/>
+  <path d="M342 364L386 330L430 378L474 280L516 328L556 274" stroke="#F25467" stroke-width="9" stroke-linecap="round" transform="rotate(-10 342 364)"/>
+  <circle cx="475" cy="280" r="10" fill="#38BDF8" transform="rotate(-10 475 280)"/>
+  <rect x="626" y="221" width="236" height="185" rx="28" fill="#D7EEFF" transform="rotate(-10 626 221)"/>
+  <text x="656" y="266" fill="#152033" font-family="Inter,Arial" font-size="20" font-weight="800" transform="rotate(-10 656 266)">Schedule: Oct 2026</text>
+  <g transform="rotate(-10 656 300)">
+    <rect x="656" y="300" width="34" height="34" rx="9" fill="white"/>
+    <rect x="704" y="300" width="34" height="34" rx="9" fill="#7DD3FC"/>
+    <rect x="752" y="300" width="34" height="34" rx="9" fill="white"/>
+    <rect x="800" y="300" width="34" height="34" rx="9" fill="white"/>
+    <rect x="656" y="348" width="178" height="38" rx="16" fill="#9DD9FF"/>
+  </g>
+</svg>

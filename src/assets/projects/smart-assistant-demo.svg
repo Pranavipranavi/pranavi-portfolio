@@ -1,0 +1,19 @@
+<svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="680" rx="44" fill="#020713"/>
+  <g opacity=".8">
+    <circle cx="134" cy="120" r="4" fill="#DFF8FF"/>
+    <circle cx="280" cy="240" r="3" fill="#38BDF8"/>
+    <circle cx="980" cy="108" r="5" fill="#FFFFFF"/>
+    <circle cx="760" cy="460" r="4" fill="#00D9FF"/>
+    <circle cx="1040" cy="470" r="3" fill="#FFFFFF"/>
+    <path d="M90 300L220 170L410 242L620 128L920 250L1110 120" stroke="#60DFFF" stroke-opacity=".35"/>
+    <path d="M210 540L430 410L612 488L846 338L1090 500" stroke="#60DFFF" stroke-opacity=".28"/>
+  </g>
+  <rect x="170" y="128" width="860" height="424" rx="34" fill="#07111F" stroke="#38BDF8" stroke-opacity=".32"/>
+  <rect x="250" y="214" width="700" height="118" rx="34" fill="#0B1628" stroke="#00D9FF" stroke-opacity=".45"/>
+  <text x="294" y="285" fill="#9CA3AF" font-family="Inter,Arial" font-size="28">Type your message...</text>
+  <text x="770" y="285" fill="#38BDF8" font-family="Inter,Arial" font-size="28" font-weight="800">Send</text>
+  <path d="M870 258L916 238L900 296L886 274L870 258Z" stroke="#BFF7FF" stroke-width="6" stroke-linejoin="round"/>
+  <rect x="334" y="384" width="532" height="78" rx="28" fill="#06192B" stroke="#B056FF" stroke-opacity=".45"/>
+  <path d="M378 424H610M648 424H704" stroke="#00D9FF" stroke-width="12" stroke-linecap="round"/>
+</svg>

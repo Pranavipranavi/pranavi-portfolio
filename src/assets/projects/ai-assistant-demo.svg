@@ -1,0 +1,32 @@
+<svg width="1200" height="680" viewBox="0 0 1200 680" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="680" rx="44" fill="#050B16"/>
+  <defs>
+    <radialGradient id="g1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(705 245) rotate(90) scale(430 620)">
+      <stop stop-color="#123F68"/>
+      <stop offset="1" stop-color="#050B16"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="122" x2="1080" y1="353" y2="353" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6BA7FF"/>
+      <stop offset=".5" stop-color="#FFD98A"/>
+      <stop offset="1" stop-color="#3AA9FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="680" rx="44" fill="url(#g1)"/>
+  <g opacity=".55">
+    <path d="M0 158H1200M0 342H1200M0 526H1200M286 0V680M595 0V680M928 0V680" stroke="#5ABFFF" stroke-opacity=".2"/>
+    <path d="M86 561L196 198H1066L1110 590" stroke="#A8C7FF" stroke-opacity=".24"/>
+    <path d="M146 610L229 242H996L1056 616" stroke="#F4C978" stroke-opacity=".22"/>
+  </g>
+  <rect x="158" y="168" width="850" height="390" rx="26" fill="#071120" stroke="#6BA7FF" stroke-opacity=".45" stroke-width="3"/>
+  <rect x="200" y="215" width="114" height="290" rx="20" fill="#0B1424" stroke="#F4C978" stroke-opacity=".35"/>
+  <path d="M238 285H278M238 340H278M238 395H278M238 450H278" stroke="#7EDBFF" stroke-opacity=".55" stroke-width="8" stroke-linecap="round"/>
+  <path d="M345 362C384 280 420 446 456 360C495 268 532 457 570 360C615 252 650 468 694 360C733 268 770 446 810 360C845 288 880 421 915 360" stroke="url(#gold)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M345 362C384 280 420 446 456 360C495 268 532 457 570 360C615 252 650 468 694 360C733 268 770 446 810 360C845 288 880 421 915 360" stroke="#FFE6A6" stroke-opacity=".42" stroke-width="26" stroke-linecap="round"/>
+  <rect x="814" y="216" width="154" height="86" rx="18" fill="#191E27" stroke="#F4C978" stroke-opacity=".5"/>
+  <text x="835" y="251" fill="#FFE3A3" font-family="Inter,Arial" font-size="18" font-weight="700">SYSTEM</text>
+  <text x="835" y="280" fill="#FFFFFF" font-family="Inter,Arial" font-size="30" font-weight="800">18%</text>
+  <rect x="814" y="414" width="154" height="86" rx="18" fill="#191E27" stroke="#F4C978" stroke-opacity=".5"/>
+  <text x="835" y="449" fill="#FFE3A3" font-family="Inter,Arial" font-size="18" font-weight="700">TASKS</text>
+  <text x="835" y="478" fill="#FFFFFF" font-family="Inter,Arial" font-size="30" font-weight="800">12</text>
+  <text x="474" y="520" fill="#FFE3A3" font-family="Inter,Arial" font-size="26" font-weight="800">AURA ACTIVE. Listening...</text>
+</svg>
