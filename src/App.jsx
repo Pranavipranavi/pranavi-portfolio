@@ -30,6 +30,7 @@ import {
   skillGroups,
   timeline,
 } from './data/portfolio';
+import ResumeDisplay from './components/ResumeDisplay';
 
 const skillIcons = {
   Frontend: Code2,
@@ -671,12 +672,39 @@ function Experience() {
 }
 
 function Resume() {
+  const [showFullResume, setShowFullResume] = useState(false);
+
+  const openResumePreview = () => {
+    if (resumeUrl) {
+      window.open(resumeUrl, '_blank');
+    } else {
+      setShowFullResume(true);
+    }
+  };
+
+  if (showFullResume) {
+    return (
+      <div id="resume" className="min-h-screen scroll-mt-28">
+        <div className="fixed left-4 right-4 top-20 z-50 flex justify-center sm:left-6 sm:right-6">
+          <button
+            onClick={() => setShowFullResume(false)}
+            className="rounded-full border border-white/12 bg-black/70 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:border-neon/50 hover:text-neon"
+          >
+            ← Back to Portfolio
+          </button>
+        </div>
+        <ResumeDisplay skillGroups={skillGroups} projects={projects} timeline={timeline} contactEmail={contactEmail} />
+      </div>
+    );
+  }
+
   return (
     <Section id="resume" eyebrow="Resume" title="Download the signal. Review the trajectory.">
       <div className="grid items-center gap-8 lg:grid-cols-[0.95fr_1.05fr]">
         <Reveal>
           <p className="max-w-xl text-lg leading-8 text-white/66">
-            A concise overview of Pranavi's education, skills, projects, and AI-assisted development experience.
+            A comprehensive overview of your education, skills, projects, and AI-assisted development experience with 
+            the ability to print directly to PDF for download.
           </p>
         </Reveal>
         <Reveal delay={0.08}>
@@ -686,35 +714,37 @@ function Resume() {
             className="resume-frame mx-auto max-w-xl rounded-[2rem] border border-neon/25 bg-white/[0.06] p-4 shadow-glow backdrop-blur-xl"
           >
             <div className="grid gap-5 rounded-[1.4rem] border border-white/10 bg-black/40 p-6 text-white backdrop-blur-xl sm:grid-cols-[0.8fr_1.2fr]">
-              <a
-                href={resumeUrl || '#resume'}
-                target="_blank"
-                rel="noreferrer"
-                className="grid min-h-64 place-items-center rounded-[1.4rem] bg-white text-black shadow-glow"
+              <button
+                onClick={() => setShowFullResume(true)}
+                className="grid min-h-64 place-items-center rounded-[1.4rem] bg-white text-black shadow-glow transition hover:bg-white/90"
               >
                 <span className="rounded-full border border-black/10 bg-black/80 px-6 py-4 font-display font-semibold text-white">
-                  Preview Resume
+                  View Full Resume
                 </span>
-              </a>
+              </button>
               <div className="flex flex-col justify-center">
                 <div>
                   <p className="text-xs font-bold uppercase text-neon">Resume</p>
                   <h3 className="mt-2 font-display text-2xl font-semibold text-white">AI-powered Full Stack Developer</h3>
                   <p className="mt-4 text-sm leading-7 text-white/62">
-                    Full stack development, AI tools, automation workflows, and project experience in one clean PDF.
+                    Full stack development, AI tools, automation workflows, and project experience in an interactive format.
                   </p>
                 </div>
                 <div className="mt-7 flex flex-wrap gap-3">
-                  <a
-                    href={resumeUrl || '#resume'}
-                    target="_blank"
-                    rel="noreferrer"
+                  <button
+                    onClick={openResumePreview}
                     className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/7 px-5 py-3 text-sm font-semibold text-white transition hover:border-neon/40 hover:text-neon"
                   >
-                    Preview
-                  </a>
-                  <MagneticButton href={resumeUrl || '#resume'} icon={ArrowDownToLine} download={resumeUrl ? resumeFileName : undefined}>
-                    Download Resume
+                    View Resume
+                  </button>
+                  <MagneticButton
+                    href={resumeUrl || '#resume'}
+                    icon={ArrowDownToLine}
+                    download={resumeUrl ? resumeFileName : undefined}
+                    target={resumeUrl ? '_blank' : undefined}
+                    rel={resumeUrl ? 'noreferrer' : undefined}
+                  >
+                    Download PDF
                   </MagneticButton>
                 </div>
               </div>
@@ -729,7 +759,7 @@ function Resume() {
 function Contact() {
   const [formState, setFormState] = useState({ status: 'idle', message: '' });
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.currentTarget;
     const formData = new FormData(form);
@@ -742,28 +772,16 @@ function Contact() {
       return;
     }
 
-    setFormState({ status: 'loading', message: 'Sending your message...' });
+    const mailtoUrl = `mailto:${contactEmail}?subject=${encodeURIComponent(
+      `Portfolio message from ${name}`
+    )}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`)}`;
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message }),
-      });
-      const result = await response.json();
+    setFormState({
+      status: 'success',
+      message: 'Your email client should open next. Complete and send the message to reach me.',
+    });
 
-      if (!response.ok || !result.success) {
-        throw new Error(result.message || 'Unable to send message.');
-      }
-
-      form.reset();
-      setFormState({ status: 'success', message: 'Message sent successfully and saved. Thank you for reaching out.' });
-    } catch (error) {
-      setFormState({
-        status: 'error',
-        message: error.message || 'Something went wrong. Please try again or email directly.',
-      });
-    }
+    window.location.href = mailtoUrl;
   };
 
   return (
