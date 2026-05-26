@@ -6,19 +6,13 @@ import smartAssistantDemo from '../assets/projects/smart-assistant-demo.svg';
 import studentQueryDemo from '../assets/projects/student-query-demo.svg';
 import swiftRecoveryDemo from '../assets/projects/swift-recovery-demo.svg';
 
-const profileImages = import.meta.glob('../../Pranavi Profile.{jpeg,jpg,png,webp}', {
-  eager: true,
-  query: '?url',
-  import: 'default',
-});
-
 const resumeFiles = import.meta.glob('../../Pranavi_Resume_.pdf', {
   eager: true,
   query: '?url',
   import: 'default',
 });
 
-export const profileImage = Object.values(profileImages)[0] || fallbackAvatar;
+export const profileImage = '/pranavi-profile.jpeg';
 export const resumeUrl = Object.values(resumeFiles)[0] || '';
 export const resumeFileName = 'Pranavi_Resume_.pdf';
 
