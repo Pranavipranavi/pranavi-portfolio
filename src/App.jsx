@@ -715,11 +715,11 @@ function Resume() {
           >
             <div className="grid gap-5 rounded-[1.4rem] border border-white/10 bg-black/40 p-6 text-white backdrop-blur-xl sm:grid-cols-[0.8fr_1.2fr]">
               <button
-                onClick={() => setShowFullResume(true)}
+                onClick={openResumePreview}
                 className="grid min-h-64 place-items-center rounded-[1.4rem] bg-white text-black shadow-glow transition hover:bg-white/90"
               >
                 <span className="rounded-full border border-black/10 bg-black/80 px-6 py-4 font-display font-semibold text-white">
-                  View Full Resume
+                  Open Resume PDF
                 </span>
               </button>
               <div className="flex flex-col justify-center">
